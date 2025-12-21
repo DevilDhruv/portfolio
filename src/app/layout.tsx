@@ -28,25 +28,24 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dhruv Rastogi",
-  "url": "https://portfolio-taupe-ten-39.vercel.app",
-  "sameAs": [
-    "https://www.linkedin.com/in/dhruv-rastogi001",
-    "https://github.com/DevilDhruv",
-    "https://leetcode.com/Devil_Dhruv"
-  ],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "MNNIT Allahabad"
-  }
-}
-</script>
-
       </body>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dhruv Rastogi",
+        "url": "https://portfolio-taupe-ten-39.vercel.app",
+        "sameAs": [
+          "https://www.linkedin.com/in/dhruv-rastogi001",
+          "https://github.com/DevilDhruv",
+          "https://leetcode.com/Devil_Dhruv"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "MNNIT Allahabad"
+        }
+      }
+      </script>
     </html>
   );
 }
