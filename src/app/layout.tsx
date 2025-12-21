@@ -24,28 +24,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Dhruv Rastogi",
+              url: "https://portfolio-taupe-ten-39.vercel.app",
+              sameAs: [
+                "https://www.linkedin.com/in/dhruv-rastogi",
+                "https://github.com/DevilDhruv"
+              ],
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "MNNIT Allahabad"
+              }
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dhruv Rastogi",
-        "url": "https://portfolio-taupe-ten-39.vercel.app",
-        "sameAs": [
-          "https://www.linkedin.com/in/dhruv-rastogi001",
-          "https://github.com/DevilDhruv",
-          "https://leetcode.com/Devil_Dhruv"
-        ],
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "MNNIT Allahabad"
-        }
-      }
-      </script>
     </html>
   );
 }
